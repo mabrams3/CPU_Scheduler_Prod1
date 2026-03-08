@@ -22,7 +22,12 @@ Work started on the Round Robin Scheduler
 Finsihed work on Round Robin Scheduler
 
 -- How to Run the Program --
-1. On launch the menu is navigatable through written commands
+1. The main program is Scheduler.cpp
+2. All the other scheduling algorithms can be run separatly in their own (cpp) files
+3. To Run the program type the command: g++ (file name.cpp) -o (file name) --> compile
+                                        ./file name --> execute
+4. cpu.txt is the input file
+5. On launch the menu is navigatable through written commands
 
 Something to consider: 
 1. Due to process 2 and 3 entering in the scheduler at the same time there is a discrepancy between the written algorithm and the computerized one. The computer will always select P3 before P2 while on paper P2 will always be selected before P3. Both are right since both processes enter at the same time and the TAT and WT averages don't change either way.
