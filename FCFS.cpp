@@ -97,6 +97,23 @@
      delete[] remaining;
      delete[] gantt;
 
+     char choice;
+     while(true){
+        std::cout << "Continue? (Y)es or (N)o: ";
+        std::cin >> choice;
+        
+        if(choice == 'Y' || choice == 'y'){
+            return;
+        }
+        else if(choice == 'N' || choice == 'n'){
+            std::cout << "Exiting Program.\n";
+            exit(0);
+        }
+        else{
+            std::cout << "Invalid selection.\n";
+        }
+    }
+
  }
 
 
