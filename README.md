@@ -15,3 +15,7 @@ Work started and completed on the SRTF algorithm
 Quick to program - used the algorithm from FCFS and modified the burst time priority
 
 Work started on the priority scheduling algorithm
+Finished working on the priority scheduler
+Worked on fail proofing the menu choices and created a redundant menu system
+
+Work started on the Round Robin Scheduler
