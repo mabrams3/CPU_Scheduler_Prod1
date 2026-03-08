@@ -11,12 +11,10 @@
         int Burst;
         int Priority;
     };
- 
- 
-  void FCFS(Schedule* scheduler, int n){
- 
-     for(int i = 0; i < n-1; i++){
-         for(int j = i+1; j<n; j++){
+
+void Priority(Schedule* scheduler, int n){
+     for(int i = 0; i<n-1; i++){
+         for(int j =i+1; j<n; j++){
              if(scheduler[j].Arrival < scheduler[i].Arrival){
                  Schedule temp = scheduler[i];
                  scheduler[i] = scheduler[j];
@@ -25,10 +23,9 @@
          }
      }
 
-    int* remaining = new int[n];
+     int* remaining = new int[n];
      for(int i=0; i<n; i++) remaining[i] = scheduler[i].Burst;
 
-     //Gantt Chart
      char (*gantt)[10] = new char[1000][10];
      int ganttIndex = 0;
 
@@ -36,69 +33,71 @@
      int running = -1;
      int terminated = 0;
 
-     while(terminated < n)
-     {
-         if(running == - 1)
-         {
-             for(int i = 0; i<n; i++){
+     while(terminated < n){
+         if(running == -1){
+             int priority = -1;
+
+             for(int i=0; i<n; i++){
                  if(scheduler[i].Arrival <= time && remaining[i] > 0){
-                     running = i;
-                     break;
+                     if(priority == -1 || scheduler[i].Priority < scheduler[priority].Priority){
+                         priority = i;
+                     }
                  }
              }
+
+             running = priority;
          }
 
          std::cout << "Time " << time << ":\n";
-
          std::cout << "RUNNING :\n";
          if(running != -1){
              std::cout << "PID= " << scheduler[running].PID
-                       << " Arr= " << scheduler[running].Arrival
-                       << " Burst= " <<scheduler[running].Burst
-                       << " Rem= " << remaining[running]
-                       << " Prio= " << scheduler[running].Priority
-                       << " State = RUNNING\n";
-             strcpy(gantt[ganttIndex++], scheduler[running].PID);
-         } else {
-             strcpy(gantt[ganttIndex++], "-");
-         }
+                        << " Arr= " << scheduler[running].Arrival
+                        << " Burst= " <<scheduler[running].Burst
+                        << " Rem= " << remaining[running]
+                        << " Prio= " << scheduler[running].Priority
+                        << " State = RUNNING\n";
+              strcpy(gantt[ganttIndex++], scheduler[running].PID);
+          } else {
+              strcpy(gantt[ganttIndex++], "-");
+          }
 
-         std::cout << "READY :\n";
-         for(int i = 0; i < n; i++){
-             if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
-                 std::cout << "PID= " << scheduler[i].PID
-                           << " Arr= " << scheduler[i].Arrival
-                           << " Burst= " <<scheduler[i].Burst
-                           << " Rem= " << remaining[i]
-                           << " Prio= " << scheduler[i].Priority
-                           << " State = READY\n";
-             }
-         }
+          std::cout << "READY :\n";
+          for(int i = 0; i < n; i++){
+              if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
+                  std::cout << "PID= " << scheduler[i].PID
+                            << " Arr= " << scheduler[i].Arrival
+                            << " Burst= " <<scheduler[i].Burst
+                            << " Rem= " << remaining[i]
+                            << " Prio= " << scheduler[i].Priority
+                            << " State = READY\n";
+              }
+          }
 
-         if(running != -1){
-             remaining[running]--;
-             if(remaining[running] == 0){
-                 terminated++;
-                 running = -1;
-             }
-         }
+          if(running != -1){
+              remaining[running]--;
+              if(remaining[running] == 0){
+                  terminated++;
+                  running = -1;
+              }
+          }
 
-         std::cout << "\n";
-         time++;
-     }
+          std::cout << "\n";
+          time++;
+      }
 
-     //Prints the Gantt Chart
-     std::cout << "GANTT CHART:\nTime: ";
-     for(int i=0; i<ganttIndex; i++) std::cout << i << " ";
-     std::cout << "\nPID:  ";
-     for(int i=0; i<ganttIndex; i++) std::cout << gantt[i] << " ";
-     std::cout << "\n";
+      //Prints the Gantt Chart
+      std::cout << "GANTT CHART:\nTime: ";
+      for(int i=0; i<ganttIndex; i++) std::cout << i << " ";
+      std::cout << "\nPID:  ";
+      for(int i=0; i<ganttIndex; i++) std::cout << gantt[i] << " ";
+      std::cout << "\n";
 
-     delete[] remaining;
-     delete[] gantt;
+      delete[] remaining;
+      delete[] gantt;
 
-     char choice;
-     while(true){
+    char choice;
+    while(true){
         std::cout << "Continue? (Y)es or (N)o: ";
         std::cin >> choice;
         
@@ -113,11 +112,9 @@
             std::cout << "Invalid selection.\n";
         }
     }
-
  }
 
-
-   int main() {
+ int main() {
        std::ifstream file("cpu.txt"); //read in text file
 
        if(!file){
@@ -151,7 +148,7 @@
                      << std::endl;
        }
        
-       FCFS(scheduler,n);
+       Priority(scheduler,n);
      
        delete[] scheduler;
        return 0;
