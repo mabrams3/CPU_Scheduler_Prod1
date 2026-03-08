@@ -10,3 +10,12 @@ The program reads in the text file and generates the PCB table.
 
 Changes made to the array structure. Vector logic is not allowed so the program was changed to accomodate that
 FCFS Scheduling algorithm is complete. Still trying to adjust the print so that the final shows the last output. i.e P5 should terminate at 27 but the code ends at 26
+
+Work started and completed on the SRTF algorithm
+Quick to program - used the algorithm from FCFS and modified the burst time priority
+
+Work started on the priority scheduling algorithm
+Finished working on the priority scheduler
+Worked on fail proofing the menu choices and created a redundant menu system
+
+Work started on the Round Robin Scheduler
