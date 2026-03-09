@@ -1,206 +1,193 @@
 Time 0:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 8 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 10 Prio= 5 State = RUNNING
 READY :
 
 Time 1:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 7 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 9 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
 
 Time 2:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 6 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 8 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
 
 Time 3:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 5 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 7 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
 
 Time 4:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 4 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 6 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
 
 Time 5:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 3 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 5 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
 
 Time 6:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 2 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 4 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P4 Arr= 6 Burst= 6 Rem= 6 Prio= 1 State = READY
 
 Time 7:
 RUNNING :
-PID= P1 Arr= 0 Burst= 8 Rem= 1 Prio= 4 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 3 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P4 Arr= 6 Burst= 6 Rem= 6 Prio= 1 State = READY
 
 Time 8:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 6 Prio= 1 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 2 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P4 Arr= 6 Burst= 6 Rem= 6 Prio= 1 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 9:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 5 Prio= 1 State = RUNNING
+PID= P1 Arr= 0 Burst= 10 Rem= 1 Prio= 5 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P4 Arr= 6 Burst= 6 Rem= 6 Prio= 1 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 10:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 4 Prio= 1 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 6 Prio= 1 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 11:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 3 Prio= 1 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 5 Prio= 1 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 12:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 2 Prio= 1 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 4 Prio= 1 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 13:
 RUNNING :
-PID= P2 Arr= 2 Burst= 6 Rem= 1 Prio= 1 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 3 Prio= 1 State = RUNNING
 READY :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = READY
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 14:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 9 Prio= 2 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 2 Prio= 1 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 15:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 8 Prio= 2 State = RUNNING
+PID= P4 Arr= 6 Burst= 6 Rem= 1 Prio= 1 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 16:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 7 Prio= 2 State = RUNNING
+PID= P2 Arr= 3 Burst= 5 Rem= 5 Prio= 2 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 17:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 6 Prio= 2 State = RUNNING
+PID= P2 Arr= 3 Burst= 5 Rem= 4 Prio= 2 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 18:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 5 Prio= 2 State = RUNNING
+PID= P2 Arr= 3 Burst= 5 Rem= 3 Prio= 2 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 19:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 4 Prio= 2 State = RUNNING
+PID= P2 Arr= 3 Burst= 5 Rem= 2 Prio= 2 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 20:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 3 Prio= 2 State = RUNNING
+PID= P2 Arr= 3 Burst= 5 Rem= 1 Prio= 2 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 21:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 2 Prio= 2 State = RUNNING
+PID= P3 Arr= 5 Burst= 2 Rem= 2 Prio= 3 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 22:
 RUNNING :
-PID= P4 Arr= 1 Burst= 9 Rem= 1 Prio= 2 State = RUNNING
+PID= P3 Arr= 5 Burst= 2 Rem= 1 Prio= 3 State = RUNNING
 READY :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = READY
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = READY
 
 Time 23:
 RUNNING :
-PID= P3 Arr= 2 Burst= 1 Rem= 1 Prio= 2 State = RUNNING
+PID= P5 Arr= 8 Burst= 4 Rem= 4 Prio= 4 State = RUNNING
 READY :
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = READY
 
 Time 24:
 RUNNING :
-PID= P5 Arr= 3 Burst= 3 Rem= 3 Prio= 3 State = RUNNING
+PID= P5 Arr= 8 Burst= 4 Rem= 3 Prio= 4 State = RUNNING
 READY :
 
 Time 25:
 RUNNING :
-PID= P5 Arr= 3 Burst= 3 Rem= 2 Prio= 3 State = RUNNING
+PID= P5 Arr= 8 Burst= 4 Rem= 2 Prio= 4 State = RUNNING
 READY :
 
 Time 26:
 RUNNING :
-PID= P5 Arr= 3 Burst= 3 Rem= 1 Prio= 3 State = RUNNING
+PID= P5 Arr= 8 Burst= 4 Rem= 1 Prio= 4 State = RUNNING
 READY :
 
 PID	Arrival	Burst	Completion	Turnaround	Waiting
-P1		0		8			8			8		0
-P4		1		9			23			22		13
-P3		2		1			24			22		21
-P2		2		6			14			12		6
-P5		3		3			27			24		21
+P1		0	10			10			10			0
+P2		3	5			21			18			13
+P3		5	2			23			18			16
+P4		6	6			16			10			4
+P5		8	4			27			19			15
 
 GANTT CHART
 Time: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 
-PID:  P1 P1 P1 P1 P1 P1 P1 P1 P2 P2 P2 P2 P2 P2 P4 P4 P4 P4 P4 P4 P4 P4 P4 P3 P5 P5 P5 
+PID:  P1 P1 P1 P1 P1 P1 P1 P1 P1 P1 P4 P4 P4 P4 P4 P4 P2 P2 P2 P2 P2 P3 P3 P5 P5 P5 P5 
