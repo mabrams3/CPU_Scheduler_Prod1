@@ -30,7 +30,7 @@ Finsihed work on Round Robin Scheduler
 5. On launch the menu is navigatable through written commands
 
 Something to consider: 
-1. Due to process 2 and 3 entering in the scheduler at the same time there is a discrepancy between the written algorithm and the computerized one. The computer will always select P3 before P2 while on paper P2 will always be selected before P3. Both are right since both processes enter at the same time and the TAT and WT averages don't change either way.
+1. cpu2.txt is the main input file (cpu.txt has processes arriving at the same time and will schedule properly but it will appear different in order between the two processes arriving at the same time).
 
 Added output file creation to the main program Scheduler.cpp not the sub programs (FCFS, etc.) 
 - The subfile will print their output directly into the terminal
