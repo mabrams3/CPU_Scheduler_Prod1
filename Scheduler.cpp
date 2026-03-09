@@ -12,6 +12,7 @@ struct Schedule {
     int Priority;
 };
 
+//Creates a menu for the user
 int showMenu(){
     int choice;
 
@@ -41,6 +42,7 @@ int showMenu(){
     }
 }
 
+//First Screen the user sees when operating the program
 void showTitleScreen() {
     char y;
 
@@ -48,7 +50,7 @@ void showTitleScreen() {
         std::cout << "=====================================\n";
         std::cout << "           CPU SCHEDULER SIM         \n";
         std::cout << "=====================================\n";
-        std::cout << "Press (Y) to Continue...";
+        std::cout << "Press (Y) to Continue..."; //Y is for Yes
 
         std::cin >> y;
 
@@ -63,6 +65,7 @@ void showTitleScreen() {
 //1. First Come First Served
 void FCFS(Schedule* scheduler, int n){
 
+    //this for loop sorts the processes based on arrival time. The lowest time will be stored in the scheduler variable
     for(int i = 0; i < n-1; i++){
         for(int j = i+1; j<n; j++){
             if(scheduler[j].Arrival < scheduler[i].Arrival){
@@ -73,10 +76,13 @@ void FCFS(Schedule* scheduler, int n){
         }
     }
 
+    //the remaining variable keeps track of how much time each process has left in the scheduler
     int* remaining = new int[n];
+
+    //Then the variable remaining will keep incrementing until the remaining time at any process index i is equal to the burst time of the process.
     for(int i=0; i<n; i++) remaining[i] = scheduler[i].Burst;
 
-    //Gantt Chart
+    //Gantt Chart -- records each process as it enters the scheduler
     char (*gantt)[10] = new char[1000][10];
     int ganttIndex = 0;
 
@@ -84,10 +90,13 @@ void FCFS(Schedule* scheduler, int n){
     int running = -1;
     int terminated = 0;
 
+    //While the process is still in the scheduler:
     while(terminated < n)
     {
+        //Intialize the system
         if(running == - 1)
         {
+            //Checks to see if any process has arrived or any process has time left to run
             for(int i = 0; i<n; i++){
                 if(scheduler[i].Arrival <= time && remaining[i] > 0){
                     running = i;
@@ -99,18 +108,21 @@ void FCFS(Schedule* scheduler, int n){
         std::cout << "Time " << time << ":\n";
 
         std::cout << "RUNNING :\n";
+
+        //If the process is in the running state:
         if(running != -1){
-            std::cout << "PID= " << scheduler[running].PID
+            std::cout << "PID= " << scheduler[running].PID //Prints all the processes information as it runs
                       << " Arr= " << scheduler[running].Arrival
                       << " Burst= " <<scheduler[running].Burst
                       << " Rem= " << remaining[running]
                       << " Prio= " << scheduler[running].Priority
                       << " State = RUNNING\n";
-            strcpy(gantt[ganttIndex++], scheduler[running].PID);
+            strcpy(gantt[ganttIndex++], scheduler[running].PID); //Adds the process to the gantt chart array to be printed at the end
         } else {
             strcpy(gantt[ganttIndex++], "-");
         }
 
+        //if the process is in the ready state:
         std::cout << "READY :\n";
         for(int i = 0; i < n; i++){
             if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
@@ -124,15 +136,15 @@ void FCFS(Schedule* scheduler, int n){
         }
 
         if(running != -1){
-            remaining[running]--;
-            if(remaining[running] == 0){
+            remaining[running]--; //if the process was running then subtract how much the process ran for in that instance
+            if(remaining[running] == 0){ //if the process has no more remaining time then terminate it from the scheduler
                 terminated++;
                 running = -1;
             }
         }
 
         std::cout << "\n";
-        time++;
+        time++; //increment the time
     }
 
     //Prints the Gantt Chart
@@ -189,19 +201,21 @@ void SRTF(Schedule* scheduler, int n){
      int terminated = 0;
 
      while(terminated < n){
-         int shortest = -1;
+         int shortest = -1; //sets the variable so the algorithm will pick the shortest remaining time
          for(int i=0; i<n; i++){
              if(scheduler[i].Arrival <= time && remaining[i] > 0){
-                 if(shortest == -1 || remaining[i] < remaining[shortest]){
+                 if(shortest == -1 || remaining[i] < remaining[shortest]){ //if the process has the shortest remaining time or the remaining time of the indexed process is less than the remaining of the shortest time then shortest is set to i.
                      shortest = i;
                  }
              }
          }
 
-         running = shortest;
+         running = shortest; //ensures that the running process is the one with the shortest remaining time
 
          std::cout << "Time " << time << ":\n";
          std::cout << "RUNNING :\n";
+
+         //If the process is in the running state:
          if(running != -1){
              std::cout << "PID= " << scheduler[running].PID
                         << " Arr= " << scheduler[running].Arrival
@@ -214,6 +228,7 @@ void SRTF(Schedule* scheduler, int n){
               strcpy(gantt[ganttIndex++], "-");
           }
 
+          //if the process is in the ready state
           std::cout << "READY :\n";
           for(int i = 0; i < n; i++){
               if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
@@ -230,7 +245,6 @@ void SRTF(Schedule* scheduler, int n){
               remaining[running]--;
               if(remaining[running] == 0){
                   terminated++;
-                  //running = -1;
               }
           }
 
@@ -266,7 +280,7 @@ void SRTF(Schedule* scheduler, int n){
     }
  }
 
- //3. Priority Scheduler
+ //3. Priority Scheduler (Non-Preemptive)
  void Priority(Schedule* scheduler, int n){
      for(int i = 0; i<n-1; i++){
          for(int j =i+1; j<n; j++){
@@ -290,11 +304,11 @@ void SRTF(Schedule* scheduler, int n){
 
      while(terminated < n){
          if(running == -1){
-             int priority = -1;
+             int priority = -1; //if running is equal to -1 then the first process priority is set to -1 to ensure the process at arrial time zero can enter the scheduler
 
              for(int i=0; i<n; i++){
                  if(scheduler[i].Arrival <= time && remaining[i] > 0){
-                     if(priority == -1 || scheduler[i].Priority < scheduler[priority].Priority){
+                     if(priority == -1 || scheduler[i].Priority < scheduler[priority].Priority){ //if the priority variable is equal to -1 or the priority of the process at index i is less than the priority of the process at the next index then priority will be set to i for the next comparison
                          priority = i;
                      }
                  }
@@ -304,6 +318,8 @@ void SRTF(Schedule* scheduler, int n){
          }
 
          std::cout << "Time " << time << ":\n";
+
+         //if the process is in the running state:
          std::cout << "RUNNING :\n";
          if(running != -1){
              std::cout << "PID= " << scheduler[running].PID
@@ -317,6 +333,7 @@ void SRTF(Schedule* scheduler, int n){
               strcpy(gantt[ganttIndex++], "-");
           }
 
+          //if the process is in the ready state:
           std::cout << "READY :\n";
           for(int i = 0; i < n; i++){
               if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
@@ -381,8 +398,8 @@ void SRTF(Schedule* scheduler, int n){
          }
      }
 
-     int quantum;
-     std::cout << "Enter Time Quantum: ";
+     int quantum; //sets up the time slicing for the scheduler
+     std::cout << "Enter Time Quantum: "; //allows the user to set a time quantum (for the input a time quantum of 2 is recommended)
      std::cin >> quantum;
 
      int* remaining = new int[n];
@@ -391,21 +408,21 @@ void SRTF(Schedule* scheduler, int n){
      char (*gantt)[10] = new char[1000][10];
      int ganttIndex = 0;
 
-     int* queue = new int[1000];
-     int front = 0;
-     int rear = 0;
+     int* queue = new int[1000]; //helps in keeping the order together (for which process gets the scheduler next)
+     int front = 0; //front of the queue 
+     int rear = 0; //back of the queue
 
      int time = 0;
      int terminated = 0;
 
      for(int i=0; i<n; i++){
-         if(scheduler[i].Arrival == 0){
+         if(scheduler[i].Arrival == 0){ //when the first process arrives then it will be placed at the back of the queue when it's preempted by another process.
              queue[rear++] = i;
          }
      }
 
      while(terminated < n){
-         if(front == rear){
+         if(front == rear){ //if the front of the queue and the rear of the queue are at the same element then the process will be recorded in the gantt chart 
              strcpy(gantt[ganttIndex++], "-");
              time++;
              continue;
@@ -415,6 +432,8 @@ void SRTF(Schedule* scheduler, int n){
          int slice = quantum;
 
          std::cout << "Time " << time << ":\n";
+
+         //if the process is in the running state:
          std::cout << "RUNNING :\n";
 
          std::cout << "PID= " << scheduler[running].PID
@@ -438,6 +457,7 @@ void SRTF(Schedule* scheduler, int n){
              }
          }
 
+         //if the process is in the ready state:
          std::cout << "READY :\n";
          for(int i = 0; i < n; i++){
              if(i != running && scheduler[i].Arrival <= time && remaining[i] > 0){
@@ -490,7 +510,7 @@ void SRTF(Schedule* scheduler, int n){
 
 
    int main() {
-       std::ifstream file("cpu.txt"); //read in text file
+       std::ifstream file("cpu.txt"); //read in input text file
 
        if(!file){
            std::cout << "Error opening file\n";
@@ -560,5 +580,4 @@ void SRTF(Schedule* scheduler, int n){
        }
        delete[] scheduler;
        return 0;
-  }
   }
