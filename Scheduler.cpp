@@ -163,10 +163,10 @@ void FCFS(Schedule* scheduler, int n){
     out << "PID\tArrival\tBurst\tCompletion\tTurnaround\tWaiting\n";
     for(int i=0;i<n;i++){
         out << scheduler[i].PID << "\t\t"
-            << scheduler[i].Arrival << "\t\t"
+            << scheduler[i].Arrival << "\t"
             << scheduler[i].Burst << "\t\t\t"
             << completion[i] << "\t\t\t"
-            << turnaround[i] << "\t\t"
+            << turnaround[i] << "\t\t\t"
             << wait[i] << "\n";
     }
 
@@ -299,10 +299,10 @@ void SRTF(Schedule* scheduler, int n){
     out << "PID\tArrival\tBurst\tCompletion\tTurnaround\tWaiting\n";
     for(int i=0;i<n;i++){
         out << scheduler[i].PID << "\t\t"
-            << scheduler[i].Arrival << "\t\t"
+            << scheduler[i].Arrival << "\t"
             << scheduler[i].Burst << "\t\t\t"
             << completion[i] << "\t\t\t"
-            << turnaround[i] << "\t\t"
+            << turnaround[i] << "\t\t\t"
             << wait[i] << "\n";
     }
 
@@ -438,10 +438,10 @@ void SRTF(Schedule* scheduler, int n){
     out << "PID\tArrival\tBurst\tCompletion\tTurnaround\tWaiting\n";
     for(int i=0;i<n;i++){
         out << scheduler[i].PID << "\t\t"
-            << scheduler[i].Arrival << "\t\t"
+            << scheduler[i].Arrival << "\t"
             << scheduler[i].Burst << "\t\t\t"
             << completion[i] << "\t\t\t"
-            << turnaround[i] << "\t\t"
+            << turnaround[i] << "\t\t\t"
             << wait[i] << "\n";
     }
 
@@ -573,12 +573,12 @@ void SRTF(Schedule* scheduler, int n){
          }
 
          if(remaining[running] > 0){
-             queue[rear++] = running;
-         }
-         else{
-            completion[running] = time+1;
+            queue[rear++] = running;
+        }
+        else{
+            completion[running] = time;
             terminated++;
-         }
+        }
          out << "\n";
      }
 
@@ -590,10 +590,10 @@ void SRTF(Schedule* scheduler, int n){
     out << "PID\tArrival\tBurst\tCompletion\tTurnaround\tWaiting\n";
     for(int i=0;i<n;i++){
         out << scheduler[i].PID << "\t\t"
-            << scheduler[i].Arrival << "\t\t"
+            << scheduler[i].Arrival << "\t"
             << scheduler[i].Burst << "\t\t\t"
             << completion[i] << "\t\t\t"
-            << turnaround[i] << "\t\t"
+            << turnaround[i] << "\t\t\t"
             << wait[i] << "\n";
     }
 
@@ -634,7 +634,7 @@ void SRTF(Schedule* scheduler, int n){
 
 
    int main() {
-       std::ifstream file("cpu.txt"); //read in input text file
+       std::ifstream file("cpu2.txt"); //read in input text file
 
        if(!file){
            std::cout << "Error opening file\n";
