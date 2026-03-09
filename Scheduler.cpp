@@ -145,7 +145,7 @@ void FCFS(Schedule* scheduler, int n){
         if(running != -1){
             remaining[running]--; //if the process was running then subtract how much the process ran for in that instance
             if(remaining[running] == 0){ //if the process has no more remaining time then terminate it from the scheduler
-                completion[running] = time;
+                completion[running] = time+1;
                 terminated++;
                 running = -1;
             }
